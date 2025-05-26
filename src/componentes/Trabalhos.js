@@ -196,7 +196,7 @@ export default function Trabalhos() {
                 <div className="modal-video-container">
                   <video
                     className="modal-video-player"
-                    src={activeCard.videoUrl}
+                    src={"/Portfolio" + activeCard.videoUrl}
                     controls
                   >
                     O seu browser não suporta o elemento <code>video</code>.

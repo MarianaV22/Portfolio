@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ScrollShowcase from './componentes/ScrollShowcase';
 import Mariana from './componentes/Mariana.js';
 import Trabalhos from './componentes/Trabalhos.js';
-import Contactos from './componentes/Contactos.js';
+import Footer from './componentes/Footer.js';
 import './App.css';
 
 function App() {
@@ -56,7 +56,7 @@ function App() {
       </section>
 
       <section id="contactos">
-         <Contactos />
+         <Footer />
       </section>
     </div>
   );

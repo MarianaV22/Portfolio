@@ -40,11 +40,7 @@ function Mariana() {
             </div>
             <img src="/Portfolio/imagens/eu.png" alt="Foto de Mariana" className="mariana-photo" />
             <p>
-              Olá, o meu nome é Mariana Moscoso Veiga, nasci em Vila Real em fevereiro de 2002. 
-              Frequentei o ensino secundário em Ciências e Tecnologias na escola Camilo Castelo Branco, 
-              licenciei-me em Engenharia da Computação Gráfica e Multimédia no Politécnico de Viana do Castelo 
-              e agora estou no mestrado em Comunicação e Tecnologias Web na Universidade de Aveiro. 
-              Fui nadadora federada durante 5 anos e hoje sou voluntária na Cruz Vermelha de Vila Real.
+             Ao longo do meu percurso académico, desenvolvi um interesse especial pela área da experiência de utilizador (UX), como criar interfaces acessíveis, funcionais e intuitivas. Gosto de trabalhar nesta área porque motiva-me pensar em soluções centradas nas pessoas, que respondam a diferentes necessidades e garantam uma boa usabilidade.
             </p>
           </div>
 
