@@ -38,7 +38,7 @@ function Mariana() {
               <h1 className="titulo" style={{ color: '#E0CC5B' }}>Olá</h1>
               <div className="linha" style={{ background: '#E0CC5B' }} />
             </div>
-            <img src="/imagens/eu.png" alt="Foto de Mariana" className="mariana-photo" />
+            <img src="/Portfolio/imagens/eu.png" alt="Foto de Mariana" className="mariana-photo" />
             <p>
               Olá, o meu nome é Mariana Moscoso Veiga, nasci em Vila Real em fevereiro de 2002. 
               Frequentei o ensino secundário em Ciências e Tecnologias na escola Camilo Castelo Branco, 
