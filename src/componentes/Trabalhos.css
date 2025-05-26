@@ -1,0 +1,203 @@
+.cards-section {
+  padding: 2rem;
+}
+
+/* título com risquinho amarelo */
+.cards-title {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  margin: 0 0 1.5rem 1rem;
+  color: #000;
+  text-shadow: none;
+}
+.cards-title::before {
+  content: "";
+  flex: 0 0 4px;
+  height: 1.2em;
+  background-color: #FECB00;
+  margin-right: 1rem;
+}
+.cards-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+  margin-left: 1rem;
+}
+
+/* grid de cards */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* cada card */
+/* Faz o .card um flex container para centrar o conteúdo */
+.card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;             /* <<< adiciona */
+  align-items: center;       /* <<< adiciona */
+  justify-content: center;   /* <<< adiciona */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+}
+
+/* Ajusta a imagem para caber sem cortar */
+.card-image {
+  max-width: 90%;            /* nunca ultrapassa 90% da largura do card */
+  max-height: 90%;           /* nunca ultrapassa 90% da altura do card */
+  object-fit: contain;       /* mantém a proporção e não corta */
+  object-position: center;   /* centra a imagem dentro do espaço disponível */
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
+/* backdrop */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* modal em 2 colunas iguais, mais compacto */
+.modal-content {
+  display: flex;
+  width: 70vw;           /* reduzido de 90% */
+  max-width: 800px;      /* limite máximo */
+  height: 60vh;          /* reduzido de 80vh */
+  max-height: 600px;     /* limite máximo */
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+/* imagem esquerda */
+
+
+/* 1) Faz do container um flexbox para centrar conteúdo */
+.modal-image-container {
+  flex: 0 0 35%;        /* ocupa cerca de 35% da largura total */
+  max-width: 300px;     /* limita a largura máxima */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;        /* espaço à volta da imagem */
+  background: #fafafa;  /* cor de fundo suave */
+}
+
+/* 2) Garante que a imagem cabe sempre inteira dentro do container */
+.modal-image-main {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;  /* mantém a proporção sem cortar */
+  display: block;
+}
+
+
+/* conteúdo direita */
+.modal-info {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #333;
+}
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* texto */
+.modal-description p {
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+/* features */
+.modal-features p {
+  margin: 0.5rem 0 0;
+  line-height: 1.4;
+}
+
+/* vídeo */
+.modal-video-container {
+  margin-top: 3rem;
+  text-align: center;
+}
+.modal-video-player {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 1) Espaço extra entre título e descrição nos cards (overlay) */
+.card-overlay h3 {
+  margin-bottom: 0.75rem;
+}
+
+/* 2) Espaço extra abaixo do título no modal */
+.modal-header h2 {
+  margin-bottom: 1rem;
+}
+
+/* 3) Se quiser um pouco mais de “arejamento” entre parágrafos */
+.modal-description p + p {
+  margin-top: 0.75rem;
+}
+
+/* 4) Estilo do link no modal (p. ex. para o YU) */
+.modal-link {
+  margin-top: 1rem;      /* separa do conteúdo acima */
+}
+
+.modal-link a {
+  color: #268373;        /* sua segunda cor de destaque */
+  text-decoration: underline;
+}
+

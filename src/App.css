@@ -1,0 +1,76 @@
+:root {
+  --color-bg: #f5f5f5;           /* fundo geral */
+  --color-card: #ffffff;         /* fundo dos cards */
+  --color-text: #444444;         /* links inativos */
+  --color-head: #000000;         /* textos em hover */
+  --color-accent: #f2c94c;       /* limão vibrante */
+  --color-accent-light: #fff8e1; /* pastel limão no hover */
+  --nav-height: 60px;
+}
+
+/* ==============================
+   Barra de Navegação
+   ============================== */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  background: var(--color-card);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+.brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-text);
+  margin-right: 2rem;
+  transition: color .3s;
+}
+.brand:hover {
+  color: var(--color-accent);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.menu li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  padding: .4rem 1rem;
+  border-radius: 999px;
+  transition: background .3s, color .3s;
+}
+
+/* hover para inativos */
+.menu li a:hover:not(.active) {
+  background: var(--color-accent-light);
+  color: var(--color-head);
+}
+
+/* estado ativo por secção */
+.menu li a.active.eu {
+  background: var(--color-accent);
+  color: var(--color-card);
+}
+.menu li a.active.trabalhos {
+  background: #268373;
+  color: var(--color-card);
+}
+.menu li a.active.contactos {
+  background: #B66F9E;
+  color: var(--color-card);
+}
+
+/* empurra o conteúdo para baixo da nav */
+body {
+  margin-top: var(--nav-height);
+}

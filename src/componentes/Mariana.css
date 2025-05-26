@@ -1,0 +1,240 @@
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis de cor */
+:root {
+  --color-bg: #f5f5f5;
+  --color-card: #ffffff;
+  --color-light-card: #fafafa;
+  --color-text: #333333;
+  --color-border: #e0e0e0;
+  --color-head: #333333;
+  --color-accent: #f4a261;
+}
+
+/* Base do Layout */
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 80px;
+}
+
+/* Card Principal */
+.mariana-card {
+  background: var(--color-card);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  padding: 2.5rem;
+  margin: 0 auto 2rem;
+  max-width: 1200px;
+}
+.mariana-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.mariana-column {
+  flex: 1 1 300px;
+}
+
+/* Cabeçalhos com barra colorida */
+.title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.title-container .linha {
+  flex: 1;
+  height: 2px;
+  background: var(--color-border);
+}
+.titulo {
+  position: relative;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 1rem;
+  padding-left: .75rem;
+  color: var(--color-head);
+}
+.titulo::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: currentColor;
+  border-radius: 2px;
+}
+
+/* Texto */
+.mariana-column p,
+.timeline-content p {
+  max-width: 60ch;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+.mariana-profile-contact p {
+  margin: .5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Foto */
+.mariana-photo {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+/* Estrelas */
+.star-rating {
+  display: inline-block;
+  margin-top: .5rem;
+}
+.star {
+  font-size: 1.5rem;
+  color: #ddd;
+  margin-right: 3px;
+}
+.star.filled {
+  color: var(--color-accent);
+  animation: glow 1s alternate infinite;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 2px var(--color-accent); }
+  to   { text-shadow: 0 0 8px var(--color-accent); }
+}
+
+/* Additional Container */
+.additional-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.academic-column,
+.software-column {
+  flex: 1 1 calc(50% - 1rem);
+  padding: 1rem;
+  background: var(--color-light-card);
+  border-radius: 8px;
+  transition: box-shadow .3s;
+}
+.academic-column:hover,
+.software-column:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin-left: 1rem;
+  padding-left: 2rem;
+  border-left: 3px solid var(--color-border);
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.timeline-dot {
+  position: absolute;
+  left: -1.65rem;
+  top: .25rem;
+  width: 1rem;
+  height: 1rem;
+  background: #BA1A2C;
+  border: 3px solid var(--color-card);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--color-border);
+}
+.timeline-content {
+  background: var(--color-card);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: box-shadow .3s;
+}
+.timeline-content:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* Softwares */
+.software-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.software-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.software-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--color-card);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+.software-item:hover .software-icon {
+  transform: rotate(360deg);
+}
+.software-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+.software-name {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.software-bar {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background: var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.software-progress {
+  height: 100%;
+  width: 0;
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+}
+.software-progress::after {
+  content: attr(data-label);
+  position: absolute;
+  right: 0;
+  top: -1.5rem;
+  font-size: .85rem;
+  font-weight: bold;
+  color: var(--color-text);
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50%     { transform: scale(1.2); }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .mariana-container,
+  .additional-container {
+    flex-direction: column;
+  }
+  .mariana-column,
+  .academic-column,
+  .software-column {
+    flex: 1 1 100%;
+  }
+}
