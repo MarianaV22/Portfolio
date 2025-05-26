@@ -127,7 +127,7 @@ function Mariana() {
               return (
                 <div className="software-item" key={name}>
                   <img
-                    src={`/icons/${className}.png`}
+                    src={`/Portfolio/icons/${className}.png`}
                     alt={name}
                     className="software-icon"
                   />

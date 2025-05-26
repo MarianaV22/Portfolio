@@ -121,7 +121,7 @@ export default function Trabalhos() {
             onClick={() => setActiveCard(card)}
           >
             <img
-              src={card.imageUrl}
+              src={"/Portfolio" + card.imageUrl}
               alt={card.title}
               className="card-image"
             />
@@ -139,7 +139,7 @@ export default function Trabalhos() {
             {/* Coluna 1: imagem */}
             <div className="modal-image-container">
               <img
-                src={activeCard.imageUrl}
+                src={"/Portfolio" + activeCard.imageUrl}
                 alt={activeCard.title}
                 className="modal-image-main"
               />
