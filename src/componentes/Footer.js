@@ -11,7 +11,7 @@ const Footer = () => (
         <ul className="footer-list">
           <li>
             <FaEnvelope className="footer-icon" />
-            <a href="mailto:tu@exemplo.com">mmoscoso@gmail.com</a>
+            <a href="mailto:tu@exemplo.com">mmoscosov02@gmail.com</a>
           </li>
           <li>
             <FaMapMarkerAlt className="footer-icon" />
