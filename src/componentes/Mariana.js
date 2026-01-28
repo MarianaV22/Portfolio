@@ -54,7 +54,7 @@ function Mariana() {
               <h1 className="titulo" style={{ color: '#f7d84c' }}>Olá</h1>
               <div className="linha" style={{ background: '#f7d84c' }} />
             </div>
-            <img src="/Portfolio/imagens/eu.png" alt="Foto de Mariana" className="mariana-photo" />
+            <img src="/imagens/eu.png" alt="Foto de Mariana" className="mariana-photo" />
             <p>
              Ao longo do meu percurso académico, desenvolvi um interesse especial pela área da experiência de utilizador (UX), como criar interfaces acessíveis, funcionais e intuitivas. Gosto de trabalhar nesta área porque motiva-me pensar em soluções centradas nas pessoas, que respondam a diferentes necessidades e garantam uma boa usabilidade.
             </p>
