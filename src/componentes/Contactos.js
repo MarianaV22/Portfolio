@@ -1,5 +1,5 @@
 import React from 'react';
-import './Contactos.css';
+//import './Contactos.css';
 
 const Contact = () => (
   <section className="contact">

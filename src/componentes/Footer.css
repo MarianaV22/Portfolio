@@ -29,7 +29,7 @@
   display: block;
   width: 40px;
   height: 3px;
-  background: #B66F9E;
+  background: #628C04;
   margin-top: 4px;
 }
 
@@ -46,7 +46,7 @@
 
 .footer-icon {
   margin-right: 0.5rem;
-  color: #B66F9E;
+  color: #628C04;
   min-width: 1.2rem;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .footer-list a:hover {
-  color: #B66F9E;
+  color: #628C04;
 }
 
 .social-list li a {

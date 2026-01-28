@@ -3,7 +3,7 @@
   --color-card: #ffffff;         /* fundo dos cards */
   --color-text: #444444;         /* links inativos */
   --color-head: #000000;         /* textos em hover */
-  --color-accent: #f2c94c;       /* limão vibrante */
+  --color-accent: #f7d84c;       /* limão vibrante */
   --color-accent-light: #fff8e1; /* pastel limão no hover */
   --nav-height: 60px;
 }
@@ -62,11 +62,11 @@
   color: var(--color-card);
 }
 .menu li a.active.trabalhos {
-  background: #268373;
+  background: #F0A008;
   color: var(--color-card);
 }
 .menu li a.active.contactos {
-  background: #B66F9E;
+  background: #628C04;
   color: var(--color-card);
 }
 

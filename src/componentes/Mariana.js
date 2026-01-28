@@ -1,6 +1,22 @@
 import React from 'react';
 import './Mariana.css';
 
+export function LemonIcon({ className = "" }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <g transform="rotate(-20 12 12)">
+        {/* corpo (preenchido) */}
+        <ellipse cx="12" cy="13" rx="7" ry="5.5" fill="currentColor" />
+        {/* folha */}
+        <path
+          d="M13.8 5.7c1.8-1.4 3.9-1.1 5 .2-1.2 1.6-3.4 2.1-5-.2Z"
+          fill="currentColor"
+        />
+      </g>
+    </svg>
+  );
+}
+
 const skillsData = [
   { name: 'Adobe Illustrator', percentage: 85, className: 'adobei' },
   { name: 'Adobe Effects',    percentage: 15, className: 'after' },
@@ -22,7 +38,7 @@ const skillsData = [
 ];
 
 // Usamos apenas estes três tons, ciclando entre eles
-const colorPalette = ['#E0CC5B', '#268373', '#B66F9E'];
+const colorPalette = ['#f7d84c','#F0A008', '#628C04' ];
 
 function Mariana() {
   return (
@@ -35,8 +51,8 @@ function Mariana() {
           {/* Coluna 1 */}
           <div className="mariana-column">
             <div className="title-container">
-              <h1 className="titulo" style={{ color: '#E0CC5B' }}>Olá</h1>
-              <div className="linha" style={{ background: '#E0CC5B' }} />
+              <h1 className="titulo" style={{ color: '#f7d84c' }}>Olá</h1>
+              <div className="linha" style={{ background: '#f7d84c' }} />
             </div>
             <img src="/Portfolio/imagens/eu.png" alt="Foto de Mariana" className="mariana-photo" />
             <p>
@@ -47,35 +63,35 @@ function Mariana() {
           {/* Coluna 2 */}
           <div className="mariana-column">
             <div className="title-container">
-              <h1 className="titulo" style={{ color: '#268373' }}>Sobre mim</h1>
-              <div className="linha" style={{ background: '#268373' }} />
+              <h1 className="titulo" style={{ color: '#F0A008' }}>Sobre mim</h1>
+              <div className="linha" style={{ background: '#F0A008' }} />
             </div>
             <div className="mariana-profile-contact">
               <p><strong>Nome:</strong> Mariana Veiga</p>
               <p><strong>Localidade:</strong> Vila Real, Portugal</p>
+              <p><strong>Data de Nascimento:</strong> 25 fevereiro 2002</p>
             </div>
             <div className="title-container">
-              <h1 className="titulo" style={{ color: '#B66F9E' }}>Línguas</h1>
-              <div className="linha" style={{ background: '#B66F9E' }} />
+              <h1 className="titulo" style={{ color: '#628C04' }}>Línguas</h1>
+              <div className="linha" style={{ background: '#628C04' }} />
             </div>
             <p>
               <strong>Português:</strong>&nbsp;
               <span className="star-rating">
-                <span className="star filled">★</span>
-                <span className="star filled">★</span>
-                <span className="star filled">★</span>
-                <span className="star filled">★</span>
-                <span className="star filled">★</span>
+                <span className="star filled">🍋</span>
+                <span className="star filled">🍋</span>
+                <span className="star filled">🍋</span>
+                <span className="star filled">🍋</span>
+                <span className="star filled">🍋</span>
               </span>
             </p>
             <p>
               <strong>Inglês:</strong>&nbsp;
               <span className="star-rating">
-                <span className="star filled">★</span>
-                <span className="star filled">★</span>
-                <span className="star filled">★</span>
-                <span className="star">★</span>
-                <span className="star">★</span>
+                <span className="star filled">🍋</span>
+                <span className="star filled">🍋</span>
+                <span className="star filled">🍋</span>
+                 
               </span>
             </p>
           </div>
@@ -107,7 +123,7 @@ function Mariana() {
             <div className="timeline-item">
               <div className="timeline-dot" />
               <div className="timeline-content">
-                <p><strong>2024–2026</strong></p>
+                <p><strong>2024– ...</strong></p>
                 <p>Mestrado em Comunicação e Tecnologias Web.</p>
               </div>
             </div>

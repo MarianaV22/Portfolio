@@ -3,8 +3,20 @@ import './Trabalhos.css'
 
 export default function Trabalhos() {
   const cardsData = [
-    {
+     {
       id: 1,
+      title: "Web Explicações",
+      content: "Projeto em parceria com …",
+      imageUrl: "/imagens/webExplica.png",
+      videoUrl: "/videos/web.mp4",
+      description: [
+        "Web Explicações é uma plataforma de tutoria online pensada para alunos do ensino secundário, desenvolvida em parceria com a empresa FTKode.",
+        "Permite aceder a material didático personalizado e acompanhar o progresso dos alunos.",
+      ],
+      features: [],
+    },
+    {
+      id: 2,
       title: "E-OWL v2",
       content: "Projeto Final de licenciatura",
       imageUrl: "/imagens/mocho.png",
@@ -20,7 +32,28 @@ export default function Trabalhos() {
       ],
     },
     {
-      id: 2,
+      id: 3,
+      title: "Concurso Logo Escola Caminha",
+      content: "Identidade visual",
+      imageUrl: "/imagens/Logo.png",
+      description: [
+        "Participação no concurso de criação de logotipo para uma Escola de Caminha.",
+        "O conceito partiu em criar uma identidade gráfica que refletisse a herança histórica do concelho e reforçasse a ponte simbólica entre a comunidade e a educação.",
+      ],
+      features: [],
+    },
+    /* {
+      id: 8,
+      title: "Rorisat",
+      content: "Design de interface",
+      imageUrl: "/imagens/rorisat.png",
+      description: [
+        "A Rorisat pediu-me para criar um design de interface simples mas informativa, com o intuito de chegar ao maior número de clientes e mostrar os serviços prestados pela empresa.",
+      ],
+      features: [],
+    },*/
+    {
+      id: 4,
       title: "BIBO.",
       content: "Trabalho Prático para unidade curricular",
       imageUrl: "/imagens/Bibo.png",
@@ -31,8 +64,8 @@ export default function Trabalhos() {
       features: [],
     },
     {
-      id: 3,
-      title: "Flyer",
+      id: 5,
+      title: "Flyer Inclusivo",
       content: "Flyer Informativo · Projeto DigiMidea UA",
       imageUrl: "/imagens/Flyer.png",
       description: [
@@ -41,30 +74,12 @@ export default function Trabalhos() {
         "O Flyer dá a conhecer que tipos de deficiência existem e que apoios estão disponíveis, especialmente na cidade de Aveiro.",
       ],
       features: [],
+      linkUrl: "https://digimedia.pt/studentsdigimedia-get-to-kno-project-n-15/",
+      linkText: "Saber mais sobre este projeto",
     },
-    {
-      id: 4,
-      title: "Web Explicações",
-      content: "Projeto em parceria com …",
-      imageUrl: "/imagens/webExplica.png",
-      videoUrl: "/videos/web.mp4",
-      description: [
-        "Web Explicações é uma plataforma de tutoria online pensada para alunos do ensino secundário, desenvolvida em parceria com a empresa FTKode.",
-        "Permite aceder a material didático personalizado e acompanhar o progresso dos alunos.",
-      ],
-      features: [],
-    },
-    {
-      id: 5,
-      title: "Concurso Logo Escola Caminha",
-      content: "Identidade visual",
-      imageUrl: "/imagens/Logo.png",
-      description: [
-        "Participação no concurso de criação de logotipo para uma Escola de Caminha.",
-        "O conceito partiu em criar uma identidade gráfica que refletisse a herança histórica do concelho e reforçasse a ponte simbólica entre a comunidade e a educação.",
-      ],
-      features: [],
-    },
+
+   
+    
     {
       id: 6,
       title: "Coffee Twin",
@@ -96,15 +111,19 @@ export default function Trabalhos() {
       linkText: "Ver mais sobre o YU",
     },
     {
-      id: 8,
-      title: "Rorisat",
-      content: "Design de interface",
-      imageUrl: "/imagens/rorisat.png",
+      id: 7,
+      title: "Redes Socias",
+      content: "Redes Sociais - Mestrado em Comunicação e tecnologias Web ",
+      imageUrl: "/imagens/mctw1.jpg",
       description: [
-        "A Rorisat pediu-me para criar um design de interface simples mas informativa, com o intuito de chegar ao maior número de clientes e mostrar os serviços prestados pela empresa.",
+        "Em 2025 aceitei o desafio de fazer parte da equipa de redes sociais do mestrado de Comunicação e Tecnologias Web e desde então tenho feito a gestão e criação das suas publicações.", 
       ],
       features: [],
+      
+      linkUrl:  "https://www.instagram.com/mctw_ua/",
+      linkText: "Página instagram MCTW",
     },
+   
   ]
 
   const [activeCard, setActiveCard] = useState(null)
@@ -180,7 +199,8 @@ export default function Trabalhos() {
 
               {/* link do YU */}
               {activeCard.linkUrl && (
-                <div className="modal-link">
+                <div className={` modal-link ${
+                      activeCard.id === 3 ? "modal-link--flyer" : activeCard.id === 7 ? "modal-link--yu" : ""}`}>
                   <a
                     href={activeCard.linkUrl}
                     target="_blank"

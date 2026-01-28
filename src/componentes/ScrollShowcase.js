@@ -108,7 +108,7 @@ const words = [
 ]
 
 // Cores a ciclar
-const colors = ['#E0CC5B', '#268373', '#B66F9E']
+const colors = ['#f7d84c','#F0A008', '#628C04' ]
 
 export default function ScrollShowcase() {
   const wordRef     = useRef(null)
